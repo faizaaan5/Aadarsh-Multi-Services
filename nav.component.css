@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #2D4059;
+    padding: 10px 20px;
+    color: #fff;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 55px;
+}
+
+.navbar-links li {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-links li a {
+    color: #F5CBA7;
+    border: #1B1B2F;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: #FF6F61;
+    transform: scale(1.1);
+}
+
+/* Dropdown Styling */
+.dropdown-content, .sub-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li, .sub-dropdown-content li {
+    border-bottom: 1px solid #555;
+}
+
+.dropdown-content li a, .sub-dropdown-content li a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content li a:hover, .sub-dropdown-content li a:hover {
+    background-color: #555;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content,
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+/* Positioning sub-dropdowns */
+.sub-dropdown-content {
+    left: 100%;
+    top: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-content, .sub-dropdown-content {
+        position: relative;
+        min-width: unset;
+        box-shadow: none;
+    }
+}
+
+/* Premium Animations */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

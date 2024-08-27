@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1A1A2E;  
+  padding: 10px 20px;
+  color: #E94560;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.fab, .fas {
+  padding: 15px;
+  font-size: 25px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  transition: transform 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+}
+
+.fab:hover,
+.fas:hover {
+  opacity: 0.7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.fa-phone {
+  background: #00FF00;
+  color: white;
+}
+
+.fa-envelope {
+  background: #0078D3;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: white;
+}
+
+.topbar-left i:hover {
+  transform: scale(1.5) rotate(-15deg) translateY(-5px);
+}
+
+.topbar-right i:hover {
+  transform: scale(1.5) rotate(15deg) translateY(-5px);
+}
+
+.topbar-center img {
+  height: 40px;
+  transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
+}
+
+.topbar-center img:hover {
+  transform: rotate(720deg) scale(1.3);
+  filter: brightness(1.3) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 768px) {
+  .topbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .topbar-left, .topbar-right {
+      margin-bottom: 10px;
+  }
+
+  .topbar-center {
+      margin: 10px 0;
+  }
+}
+
+/* Premium Animations */
+@keyframes fadeInDown {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
